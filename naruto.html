@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Store</title>
+    <link rel="icon" href="\assets\img\Akatsuki-Logo-PNG-Pic.png" type="image/png">
+    <link rel="stylesheet" href="./assets/font/themify-icons-font/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./assets/css/naruto.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="grid">
+            <header class="header">
+                <nav class="header__navbar">
+                    <ul class="header__navbar-list">
+                        <li class="header__navbar-item">
+                            Theo dõi chúng tôi
+                            <a href="https://www.facebook.com/ritoe001/" class="header__navbar-icon-link">
+                                <i class="ti-facebook"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="header__navbar-list">
+                        <li class="header__navbar-item">
+                            <a onclick="register_move()" class="header__navbar-item-link header__navbar-item--strong header__navbar-item--separate">
+                                <i class="ti-user"></i>
+                                Đăng kí
+                            </a>
+                        </li>
+                        <li class="header__navbar-item">
+                            <a onclick="login_move()" class="header__navbar-item-link header__navbar-item--strong">
+                                Đăng nhập
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- phần search -->
+                <div class="header-with-search">
+                    <div class="header__logo">
+                        <a href="index.html">
+                        <img src="./assets/img/Akatsuki-Logo-PNG-Pic.png" alt="" class="header__logo-img">
+                        </a>
+                    </div>
+
+                    <div class="header__search">
+                        <input type="search" class="header__search-input" placeholder=" Nhập tìm kiếm">
+                        <button class="header__search-btn">
+                            <i class="header__search-btn-icon ti-search"></i>
+                        </button>
+                    </div>
+
+                    <div class="header__cart">
+                        <i class="header__cart-icon ti-shopping-cart"></i>
+                    </div>
+                </div>
+            </header>
+        </div>
+
+        <div class="container">
+            <div class="category">
+                <h3 class="category__heading">
+                    <i class="category__heading-icon ti-list"></i>
+                    Danh mục
+                </h3>
+                <ul class="category-list">
+                    <li class="category-item-list">
+                        <i class="ti-control-play">
+                            Danh mục sản phẩm
+                        </i>
+                    </li>
+                    <li class="category-item">
+                        <a href="onepice.html" class="category-item__link">Mô hình One Piece</a>
+                    </li>
+                    <li class="category-item">
+                        <a href="naruto.html" class="category-item__link">Mô hình Naruto</a>
+                    </li>
+                    <li class="category-item">
+                        <a href="dragonball.html" class="category-item__link">Mô hình Dragonball Z</a>
+                    </li>
+                    <li class="category-item">
+                        <a href="KNY.html" class="category-item__link">Mô hình Kimetsu No Yaiba</a>
+                    </li>
+                    <li class="category-item">
+                        <a href="JK.html" class="category-item__link">mô hình Jujutsu Kaisen</a>
+                    </li>
+                    <li class="category-item">
+                        <a href="orther.html" class="category-item__link">Mô hình bán chạy khác</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="product">
+                <div class="selective"> 
+                    <button><a href="index.html" class="ti-home"> Trang chủ</a></button>
+                    <span>Sắp xếp sản phẩm</span>
+                    <a href="naruto.html"><button>Phổ biến</button></a>
+                    <a href="KNY.html"><button>Mới nhất</button></a>
+                    <a href="onepice.html"><button>Bán chạy</button></a>
+                </div>
+                <div class="nav-product-naruto">
+                    <div class="product-list">
+                        <div class="home-product-item__img">
+                            <a href=""><img src="./assets/img/itachi.jfif" alt=""></a>
+                        </div>
+                        <div class="product-title">
+                            <h3>Mô hình Naruto</h3>
+                        </div>
+                        <div class="home-product-item__name">Mô hình itachi x Susano</div>
+                        <div class="home-product-item__price">
+                            <span class="home-product-item__price-old">₫3.430.000</span>
+                            <span class="home-product-item__price-current">₫3.087.000</span>
+                        </div>
+                        <div class="home-product-item__action">
+                            <div class="home-product-item__rating">
+                                <i class="ti-star"></i>
+                                <i class="ti-star"></i>
+                                <i class="ti-star"></i>
+                                <i class="ti-star"></i>
+                                <i class="ti-star"></i>
+                            </div>
+                        </div>
+                        <div class="home-product-item__origin">
+                            <span class="home-product-item__brand">Para Store</span>
+                            <span class="home-product-item__origin-name">VN</span>
+                        </div>
+                        <div class="home-product-item__sale-off">
+                            <span class="home-product-item__sale-off-percent">- 10%</span>
+                        </div>
+                    </div>
+                    <div class="product-list">
+                        <div class="home-product-item__img">
+                            <a href=""><img src="./assets/img/madara.jfif" alt=""></a>
+                        </div>
+                        <div class="product-title">
+                            <h3>Mô hình Naruto</h3>
+                        </div>
+                        <div class="home-product-item__name">Mô hình Madara X Susano</div>
+                        <div class="home-product-item__price">
+                            <span class="home-product-item__price-old">₫2.430.000</span>
+                            <span class="home-product-item__price-current">₫2.187.000</span>
+                        </div>
+                        <div class="home-product-item__action">
+                            <div class="home-product-item__rating">
+                                <i class="ti-star"></i>
+                                <i class="ti-star"></i>
+                                <i class="ti-star"></i>
+                                <i class="ti-star"></i>
+                                <i class="ti-star"></i>
+                            </div>
+                        </div>
+                        <div class="home-product-item__origin">
+                            <span class="home-product-item__brand">Para Store</span>
+                            <span class="home-product-item__origin-name">VN</span>
+                        </div>
+                        <div class="home-product-item__sale-off">
+                            <span class="home-product-item__sale-off-percent">- 10%</span>
+                        </div>
+                    </div>
+
+                    <div class="product-list">
+                        <div class="home-product-item__img">
+                            <a href=""><img src="./assets/img/sasuke.jfif" alt=""></a>
+                        </div>
+                        <div class="product-title">
+                            <h3>Mô hình Naruto</h3>
+                        </div>
+                        <div class="home-product-item__name">Mô hình Sasuke x Susano</div>
+                        <div class="home-product-item__price">
+                            <span class="home-product-item__price-old">₫1.830.000</span>
+                            <span class="home-product-item__price-current">₫1.500.600</span>
+                        </div>
+                        <div class="home-product-item__action">
+                            <div class="home-product-item__rating">
+                                <i class="ti-star"></i>
+                                <i class="ti-star"></i>
+                                <i class="ti-star"></i>
+                                <i class="ti-star"></i>
+                                <i class="ti-star"></i>
+                            </div>
+                        </div>
+                        <div class="home-product-item__origin">
+                            <span class="home-product-item__brand">Para Store</span>
+                            <span class="home-product-item__origin-name">VN</span>
+                        </div>
+                        <div class="home-product-item__sale-off">
+                            <span class="home-product-item__sale-off-percent">- 18%</span>
+                        </div>
+                    </div>
+
+                    <div class="product-list">
+                        <div class="home-product-item__img">
+                            <a href=""><img src="./assets/img/kisame.jpg" alt=""></a>
+                        </div>
+                        <div class="product-title">
+                            <h3>Mô hình Naruto</h3>
+                        </div>
+                        <div class="home-product-item__name">Mô hình Hoshigaki Kisame</div>
+                        <div class="home-product-item__price">
+                            <span class="home-product-item__price-old">₫8.430.000</span>
+                            <span class="home-product-item__price-current">₫6.912.600</span>
+                        </div>
+                        <div class="home-product-item__action">
+                            <div class="home-product-item__rating">
+                                <i class="ti-star"></i>
+                                <i class="ti-star"></i>
+                                <i class="ti-star"></i>
+                                <i class="ti-star"></i>
+                                <i class="ti-star"></i>
+                            </div>
+                        </div>
+                        <div class="home-product-item__origin">
+                            <span class="home-product-item__brand">Para Store</span>
+                            <span class="home-product-item__origin-name">VN</span>
+                        </div>
+                        <div class="home-product-item__sale-off">
+                            <span class="home-product-item__sale-off-percent">- 18%</span>
+                        </div>
+                    </div>
+                    <div class="product-list">
+                        <div class="home-product-item__img">
+                            <a href=""><img src="./assets/img/kakasi.jfif" alt=""></a>
+                        </div>
+                        <div class="product-title">
+                            <h3>Mô hình Naruto</h3>
+                        </div>
+                        <div class="home-product-item__name">Mô hình Hatake Kakashi x susano</div>
+                        <div class="home-product-item__price">
+                            <span class="home-product-item__price-old">₫3.430.000</span>
+                            <span class="home-product-item__price-current">₫2.812.600</span>
+                        </div>
+                        <div class="home-product-item__action">
+                            <div class="home-product-item__rating">
+                                <i class="ti-star"></i>
+                                <i class="ti-star"></i>
+                                <i class="ti-star"></i>
+                                <i class="ti-star"></i>
+                                <i class="ti-star"></i>
+                            </div>
+                        </div>
+                        <div class="home-product-item__origin">
+                            <span class="home-product-item__brand">Para Store</span>
+                            <span class="home-product-item__origin-name">VN</span>
+                        </div>
+                        <div class="home-product-item__sale-off">
+                            <span class="home-product-item__sale-off-percent">- 18%</span>
+                        </div>
+                    </div>
+                    <div class="product-list">
+                        <div class="home-product-item__img">
+                            <a href=""><img src="./assets/img/obito.jpg" alt=""></a>
+                        </div>
+                        <div class="product-title">
+                            <h3>Mô hình Naruto</h3>
+                        </div>
+                        <div class="home-product-item__name">Mô hình Obito x Madara</div>
+                        <div class="home-product-item__price">
+                            <span class="home-product-item__price-current">₫1.600.000</span>
+                        </div>
+                        <div class="home-product-item__action">
+                            <div class="home-product-item__rating">
+                                <i class="ti-star"></i>
+                                <i class="ti-star"></i>
+                                <i class="ti-star"></i>
+                                <i class="ti-star"></i>
+                                <i class="ti-star"></i>
+                            </div>
+                        </div>
+                        <div class="home-product-item__origin">
+                            <span class="home-product-item__brand">Para Store</span>
+                            <span class="home-product-item__origin-name">VN</span>
+                        </div>
+                    </div>
+                    <div class="product-list">
+                        <div class="home-product-item__img">
+                            <a href=""><img src="./assets/img/kakuzu.jpg" alt=""></a>
+                        </div>
+                        <div class="product-title">
+                            <h3>Mô hình Naruto</h3>
+                        </div>
+                        <div class="home-product-item__name">Mô hình Sasori Akatsuki</div>
+                        <div class="home-product-item__price">
+                            <span class="home-product-item__price-current">₫7.550.000</span>
+                        </div>
+                        <div class="home-product-item__action">
+                            <div class="home-product-item__rating">
+                                <i class="ti-star"></i>
+                                <i class="ti-star"></i>
+                                <i class="ti-star"></i>
+                                <i class="ti-star"></i>
+                                <i class="ti-star"></i>
+                            </div>
+                        </div>
+                        <div class="home-product-item__origin">
+                            <span class="home-product-item__brand">Para Store</span>
+                            <span class="home-product-item__origin-name">VN</span>
+                        </div>
+                    </div>
+                    <div class="product-list">
+                        <div class="home-product-item__img">
+                            <a href=""><img src="./assets/img/hidan.jpg" alt=""></a>
+                        </div>
+                        <div class="product-title">
+                            <h3>Mô hình Naruto</h3>
+                        </div>
+                        <div class="home-product-item__name">Mô hình Thuấn thân Shisui</div>
+                        <div class="home-product-item__price">
+                            <span class="home-product-item__price-current">₫7.550.000</span>
+                        </div>
+                        <div class="home-product-item__action">
+                            <div class="home-product-item__rating">
+                                <i class="ti-star"></i>
+                                <i class="ti-star"></i>
+                                <i class="ti-star"></i>
+                                <i class="ti-star"></i>
+                                <i class="ti-star"></i>
+                            </div>
+                        </div>
+                        <div class="home-product-item__origin">
+                            <span class="home-product-item__brand">Para Store</span>
+                            <span class="home-product-item__origin-name">VN</span>
+                        </div>
+                    </div>
+                    <div class="product-list">
+                        <div class="home-product-item__img">
+                            <a href=""><img src="./assets/img/cuuvi.jpg" alt=""></a>
+                        </div>
+                        <div class="product-title">
+                            <h3>Mô hình Naruto</h3>
+                        </div>
+                        <div class="home-product-item__name">Mô hình God Mode Naruto with Ninetails</div>
+                        <div class="home-product-item__price">
+                            <span class="home-product-item__price-current">₫25.800.000</span>
+                        </div>
+                        <div class="home-product-item__action">
+                            <div class="home-product-item__rating">
+                                <i class="ti-star"></i>
+                                <i class="ti-star"></i>
+                                <i class="ti-star"></i>
+                                <i class="ti-star"></i>
+                                <i class="ti-star"></i>
+                            </div>
+                        </div>
+                        <div class="home-product-item__origin">
+                            <span class="home-product-item__brand">Para Store</span>
+                            <span class="home-product-item__origin-name">VN</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="button">
+                    <button class="icon" onclick="scroll1()">
+                        <i class="ti-angle-double-left"></i>
+                    </button >
+                    <button   button class="icon" onclick="scroll2()">
+                        <i class="ti-angle-double-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    <footer class="footer">
+            <div class="footer__list">
+                <div class="footer__list-title">
+                    <h2>Para Store</h2>
+                    <p>Para Store là kênh mua sắm mô hình giá rẻ hàng đầu Việt Nam được các reviewer lựa chọn để giới thiệu sản phẩm họ yêu thích tới các viewer, người hâm mộ.</p>
+                    <img src="./assets/img/Akatsuki-Logo-PNG-Pic.png" alt="">
+                </div>
+                <div class="footer__list-category">
+                    <h5 for="">Danh mục sản phẩm</h5>
+                    <ul>
+                        <li><a href="">Mô hình One Piece</a></li>
+                        <li><a href="">Mô hình Naruto</a></li>
+                        <li><a href="">Mô hình DragonballZ</a></li>
+                        <li><a href="">Mô hình Kimetsu No Yaiba</a></li>
+                        <li><a href="">Mô hình Jujutsu Kaisen</a></li>
+                        <li><a href="">Mô hình bán chạy khác</a></li>
+                    </ul>
+                </div>
+                <div class="footer__list-user-manual">
+                    <h5>Thông tin và hướng dẫn</h5>
+                    <ul>
+                        <li><a href="">Về Para Store</a></li>
+                        <li><a href="">Mời bạn bè - Nhận thưởng</a></li>
+                        <li><a href="">Thời gian bảo hành</a></li>
+                        <li><a href="">Hỗ trợ đơn hàng</a></li>
+                        <li><a href="">Cửa hàng Para Store</a></li>
+                        <li><a href="">Phương thức giao hàng</a></li>
+                        <li><a href="">Phương thức đặt hàng</a></li>
+                        <li><a href="">Đăng kí thẻ hội viên</a></li>
+                    </ul>
+                </div>
+                <div class="footer__list-link">
+                    <div class="footer__list-link-social">
+                        <h5>Tải ứng dụng Para Store</h5>
+                        <img src="./assets/img/ggplay.png" alt="">
+                        <img src="./assets/img/applestore.png" alt="">
+                    </div>
+                    <div class="footer__list-link-hotline">
+                        <h6>Hottline: 0123456789</h6>
+                        <a href=""><i class="ti-facebook"></i></a>
+                        <a href=""><i class="ti-instagram"></i></a>
+                        <a href=""><i class="ti-reddit"></i></a>
+                        <a href=""><i class="ti-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+    </footer>
+    <script type="text/javascript" src="/assets/js/index.js"></script>
+    <!-- <script>
+        function scroll1() {
+            var left = document.querySelector('.nav-product-naruto')
+            left.scrollBy(-350, 0)
+        }
+
+        function scroll2() {
+            var right = document.querySelector('.nav-product-naruto')
+            right.scrollBy(350, 0)
+        }
+    </script>
+    <script>
+        function scroll3() {
+            var left = document.querySelector('.nav-product-onepiece')
+            left.scrollBy(-350, 0)
+        }
+
+        function scroll4() {
+            var right = document.querySelector('.nav-product-onepiece')
+            right.scrollBy(350, 0)
+        }
+    </script>
+    <script>
+        function scroll5() {
+            var left = document.querySelector('.nav-product-dragonball')
+            left.scrollBy(-350, 0)
+        }
+
+        function scroll6() {
+            var right = document.querySelector('.nav-product-dragonball')
+            right.scrollBy(350, 0)
+        }
+    </script>
+    <script>
+        function scroll7() {
+            var left = document.querySelector('.nav-product-kimetsunoyaiba')
+            left.scrollBy(-350, 0)
+        }
+
+        function scroll8() {
+            var right = document.querySelector('.nav-product-kimetsunoyaiba')
+            right.scrollBy(350, 0)
+        }
+    </script>
+    <script>
+        function scroll9() {
+            var left = document.querySelector('.nav-product-jujutsujaisen')
+            left.scrollBy(-350, 0)
+        }
+
+        function scroll10() {
+            var right = document.querySelector('.nav-product-jujutsujaisen')
+            right.scrollBy(350, 0)
+        }
+    </script>
+    <script>
+        function scroll11() {
+            var left = document.querySelector('.nav-product-more')
+            left.scrollBy(-350, 0)
+        }
+
+        function scroll12() {
+            var right = document.querySelector('.nav-product-more')
+            right.scrollBy(350, 0)
+        }
+    </script> -->
+</body>
+</html

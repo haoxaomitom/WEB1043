@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Para Store</title>
+    <link rel="icon" href="\assets\img\Akatsuki-Logo-PNG-Pic.png" type="image/png">
+    <link rel="stylesheet" href="./assets/font/themify-icons-font/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./assets/css/sanpham.css">
+</head>
+<body onload="loadhome()">
+    <div class="wrapper">
+        <div class="grid">
+            <header class="header">
+                <nav class="header__navbar">
+                    <ul class="header__navbar-list">
+                        <li class="header__navbar-item">
+                            Theo dõi chúng tôi
+                            <a href="https://www.facebook.com/ritoe001/" class="header__navbar-icon-link">
+                                <i class="ti-facebook"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="user">
+                        <h1>Xin chào <span id="username"></span></h1>
+                        <button onclick="logout()"><span>Đăng xuất</span></button>
+                        </div>
+                    <ul class="header__navbar-list">
+                        <li class="header__navbar-item">
+                            <a onclick="register_move()" class="header__navbar-item-link header__navbar-item--strong header__navbar-item--separate">
+                                <i class="ti-user"></i>
+                                Đăng kí
+                            </a>
+                        </li>
+                        <li class="header__navbar-item">
+                            <a onclick="login_move()" class="header__navbar-item-link header__navbar-item--strong">
+                                Đăng nhập
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- phần search -->
+                <div class="header-with-search">
+                    <div class="header__logo">
+                        <a href="index.html">
+                        <img src="./assets/img/Akatsuki-Logo-PNG-Pic.png" alt="" class="header__logo-img">
+                        </a>
+                    </div>
+
+                    <div class="header__search">
+                        <input type="search" class="header__search-input" placeholder=" Nhập tìm kiếm">
+                        <button class="header__search-btn">
+                            <i class="header__search-btn-icon ti-search"></i>
+                        </button>
+                    </div>
+
+                    <div class="header__cart">
+                        <a href="cart.html">
+                        <i style="font-size: 50px;" class="header__cart-icon ti-shopping-cart"></i>
+                        <span id="slsp"></span>
+                        </a>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="container">
+            <div class="category">
+                <h3 class="category__heading">
+                    <i class="category__heading-icon ti-list"></i>
+                    Danh mục
+                </h3>
+                <ul class="category-list">
+                    <li class="category-item-list">
+                        <i class="ti-control-play">
+                            Danh mục sản phẩm
+                        </i>
+                    </li>
+                    <li class="category-item">
+                        <a href="onepice.html" class="category-item__link">Mô hình One Piece</a>
+                    </li>
+                    <li class="category-item">
+                        <a href="naruto.html" class="category-item__link">Mô hình Naruto</a>
+                    </li>
+                    <li class="category-item">
+                        <a href="dragonball.html" class="category-item__link">Mô hình Dragonball Z</a>
+                    </li>
+                    <li class="category-item">
+                        <a href="KNY.html" class="category-item__link">Mô hình Kimetsu No Yaiba</a>
+                    </li>
+                    <li class="category-item">
+                        <a href="JK.html" class="category-item__link">mô hình Jujutsu Kaisen</a>
+                    </li>
+                    <li class="category-item">
+                        <a href="orther.html" class="category-item__link">Mô hình bán chạy khác</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="product">
+                <div class="selective">
+                    <button><a href="index.html" class="ti-home"> Trang chủ</a></button>
+                    <span>Sắp xếp sản phẩm</span>
+                    <a href="naruto.html"><button>Phổ biến</button></a>
+                    <a href="KNY.html"><button>Mới nhất</button></a>
+                    <a href="onepice.html"><button>Bán chạy</button></a>
+                </div>
+
+                <!-- --------------------------------------------------------------------------------------------------- -->
+                <div class="nav-product-onepiece">
+                    <div class="product-list">
+                        <!-- <div class="home-product-item__img">
+                            <img src="./assets/img/zoro.jpg"/>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <p>Mô hình One Piece</p>
+                            </div>
+                                <div class="home-product-item__name">Mô hình Roronoa Zoro</div>
+                                    <div class="home-product-item__price">
+                                        <span class="home-product-item__price-current">₫19.300.000</span>
+                                    </div>
+                                    <input type="hidden" name="price" value="123">
+                                <div class="home-product-item__action">
+                                    <div class="home-product-item__rating">
+                                        <ul class="stars">
+                                            <li class="star">	&#9733;</li>
+                                            <li class="star">	&#9733;</li>
+                                            <li class="star">	&#9733;</li>
+                                            <li class="star">	&#9733;</li>
+                                            <li class="star">	&#9733;</li>
+                                        </ul>
+                                    </div>
+                                    <div class="output"></div>
+                                    <br>
+                                    <div class="so_luong">
+                                        <label>Số lượng mua:</label>
+                                        <input type="number" id="quantity" name="quantity" min="1" max="10">
+                                        <button id="submit-btn">Submit</button>
+                                    </div>
+                                    <div class="bi"></div>
+                                <div class="bc">
+                                    <button>Add to Cart</button>
+                                </div>
+                                <div class="b-buy">
+                                    <button>Buy Now</button>
+                                </div>
+                                 -->
+                                <div class="boxpronew">
+                                    <div class="boximgpro__rong"></div>
+                                    <div class="boximgpro">
+                                        <img src="./assets/img/zoro.jpg" style="width: 100%;">
+                                    </div>
+                                </div>
+                                    <a class="name-product">Mô hình Roronoa Zoro</a>
+                                        <p class="const-pro">đ19.300.000</p>
+                                    <input type="hidden" name="price" value="123">
+                                    <button>Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="footer__list">
+                <div class="footer__list-title">
+                    <h2>Para Store</h2>
+                    <p>Para Store là kênh mua sắm mô hình giá rẻ hàng đầu Việt Nam được các reviewer lựa chọn để giới thiệu sản phẩm họ yêu thích tới các viewer, người hâm mộ.</p>
+                    <img src="./assets/img/Akatsuki-Logo-PNG-Pic.png" alt="">
+                </div>
+                <div class="footer__list-category">
+                    <h5 for="">Danh mục sản phẩm</h5>
+                    <ul>
+                        <li><a href="">Mô hình One Piece</a></li>
+                        <li><a href="">Mô hình Naruto</a></li>
+                        <li><a href="">Mô hình DragonballZ</a></li>
+                        <li><a href="">Mô hình Kimetsu No Yaiba</a></li>
+                        <li><a href="">Mô hình Jujutsu Kaisen</a></li>
+                        <li><a href="">Mô hình bán chạy khác</a></li>
+                    </ul>
+                </div>
+                <div class="footer__list-user-manual">
+                    <h5>Thông tin và hướng dẫn</h5>
+                    <ul>
+                        <li><a href="">Về Para Store</a></li>
+                        <li><a href="">Mời bạn bè - Nhận thưởng</a></li>
+                        <li><a href="">Thời gian bảo hành</a></li>
+                        <li><a href="">Hỗ trợ đơn hàng</a></li>
+                        <li><a href="">Cửa hàng Para Store</a></li>
+                        <li><a href="">Phương thức giao hàng</a></li>
+                        <li><a href="">Phương thức đặt hàng</a></li>
+                        <li><a href="">Đăng kí thẻ hội viên</a></li>
+                    </ul>
+                </div>
+                <div class="footer__list-link">
+                    <div class="footer__list-link-social">
+                        <h5>Tải ứng dụng Para Store</h5>
+                        <img src="./assets/img/ggplay.png" alt="">
+                        <img src="./assets/img/applestore.png" alt="">
+                    </div>
+                    <div class="footer__list-link-hotline">
+                        <h6>Hottline: 0123456789</h6>
+                    </div>
+                </div>
+            </div>
+    </footer>
+    </div>
+    <script type="text/javascript" src="/assets/js/cart.js"></script>
+</body>
+</html
