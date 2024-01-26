@@ -1,0 +1,713 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+:root {
+color: #0066B2;
+color: #dc052d;
+}
+
+/* Phần header dòng đầu (kết nối đăng kí đăng nhập.....)*/
+.header {
+    height: 120px;
+    width: 100%;
+    /* màu của khung header */
+    /* background-image: linear-gradient(#27c6e2,#f908ff); */
+    background-color: black;
+}
+
+/* cho mục theo dõi và mục đăng nhập đăng kí trên một hàng và căn ra 2 bên */
+.header__navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+ul.header__navbar-list{
+    margin: 4px 0 0 0;
+}
+
+.header__navbar-item-link:hover {
+    color: white;
+    text-decoration: none;
+}
+
+li.header__navbar-item {
+    margin:0 8px;
+    position: relative;
+}
+
+/* chỉnh màu và css cho các item như đăng nhập đăng kí, theo giỏi */
+li.header__navbar-item,
+.header__navbar-item-link {
+    display: inline-block;
+    font-size: 14px;
+    text-decoration: none;
+    color: white;
+    position: relative;
+    font-weight: 300;
+    list-style: none;
+    cursor:pointer;
+}
+
+/* cho chử đăng nhập và đăng kí dày hơn mấy chử khác */
+.header__navbar-item--strong {
+    font-weight: 600;
+}
+
+
+/* thanh căn ngang đăng nhập và đăng kí */
+.header__navbar-item--separate::before {
+    content: "";
+    border: solid rgb(175, 175, 175) 0.5px;
+    height: 12px;
+    background-color: black;
+    position: absolute;
+    display: block;
+    right: -12px;
+    top: 2px;
+}
+
+/* di chuột vào theo dõi, đăng nhập đăng kí nó đổi màu */
+.header__navbar-item-link::after {
+    content: "";
+    position: absolute;
+    background: white;
+    height: 3px;
+    width: 0px;
+    left: 0;
+    bottom: -6px;
+    transition: all 0.5s ease-in-out;
+}
+
+.header__navbar-item-link:hover::after {
+    width: 50%;
+    transform: translateX(100%);
+}
+
+.header__navbar-icon-link {
+    text-decoration: none;
+    color: white;
+    padding-left: 6px ;
+}
+
+.header__navbar-icon-link:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.header__navbar-icon-link::after {
+    content: "";
+    position: absolute;
+    background: white;
+    height: 3px;
+    width: 0px;
+    left: 0px;
+    bottom: -6px;
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+}
+
+.header__navbar-icon-link:hover::after {
+    width: 50%;
+    transform: translateX(100%);
+}
+
+/* ô search, logo , giỏ hàng */
+.header-with-search {
+    display: flex;
+    align-items: center;
+    flex-basis: 100%;
+}
+
+.header__logo {
+    width: 25%;
+    
+}
+
+.header__logo-img {
+    width: 100px;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+/* thanh tìm kiếm */
+.header__search {
+    height: 30px;
+    background-color: white;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    padding: 4px;
+}
+
+.header__search-input {
+    border: none;
+    outline: none;
+    width: 500px;
+    font-size: 12px;
+}
+
+/* nút tìm kiếm */
+.header__search-btn {
+    color: rgb(255, 255, 255);
+    /* background-image: linear-gradient(#27c6e2,#f908ff); */
+    background-color: black;
+    border: none;
+    height: 22px;
+    width: 45px;
+    padding: 5px 0px 2px 0px;
+    display: block;
+    cursor: pointer;
+}
+
+.header__search-btn:hover {
+    color: gray;
+}
+
+/* giỏ hàng */
+.header__cart {
+    color: white;
+    padding-left: 60px;
+    font-size: 25px;
+    cursor: pointer;
+    width: 25%;
+    text-align: center;
+}
+
+/* giỏ hàng hover */
+.header__cart-icon:hover {
+    color: rgb(222, 222, 222);
+}
+
+/* thanh mục lục */
+.container {
+    margin: 0px 20px 0px 20px;
+    display: flex;
+}
+
+.category {
+    background-color: white;
+    border-radius: 2px;
+    font-size: 14px;
+    padding: 6px 6px;
+    box-shadow: 0 1px 3px #888;
+    width: 100%;
+    margin-top: 20px;
+    height: 350px;
+}
+
+.category__heading-icon {
+    font-size: 16px;
+}
+
+.category__heading {
+    font-size: 18px;
+    border-bottom: 1px solid rgb(57, 197, 61);
+    padding-bottom: 16px;
+    padding-left: 16px;
+}
+
+.category-item-list {
+    color: red;
+    font-size: 14px;
+    padding-left: 10px;
+    padding-top: 20px;
+}
+
+.category-item-list {
+    list-style: none;
+}
+
+.category-item__link {
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 6px 16px;
+    position: relative;
+    transition:right linear 0.3s;
+    right: 0px;
+}
+
+.category-item__link:hover {
+    color: red;
+    right: -6px;
+    text-decoration: none;
+}
+
+.category-list {
+    padding-left:0 ;
+    font-size: 12px;
+}
+
+.category-item {
+    list-style: none;
+}
+
+/* lọc */
+.selective {
+    background-color: #ddd;
+    margin-top: 20px;
+    padding: 5px 5px 5px 20px;
+    outline: none;
+    
+}
+.selective button a
+{
+    text-decoration: none;
+    color:black;
+    font-size:20px;
+    background-color:none;
+}
+
+.selective span {
+    font-weight: 600;
+    color: black;
+}
+.selective button{
+    background-color: gray;
+    border: none;
+    background-color: white;
+    margin: 5px;
+    padding: 5px 10px 5px 10px;
+    font-weight: 600;
+}
+.selective button:focus {
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    outline: none;
+}
+.selective button:hover
+{
+    cursor:pointer;
+}
+.selective label {
+    background-color: white;
+    padding: 5px 10px 5px 10px;
+}
+
+
+.more {
+    height:30px;
+    width: 150px;
+    position: relative;
+}
+
+.more ul li{
+    display: none;
+    margin-left: -20px;
+}
+
+.more ul {
+    position: absolute;
+    top: 30px;
+    width: 150px;
+    background-color: white;
+    left: 0px;
+    z-index: 1;
+}
+
+.more ul li {
+    list-style: none;
+    padding: 5px 10px 5px 10px;
+}
+
+.more ul li a {
+    color: black;
+}
+
+label.more:hover ul li{
+    display: block;
+    color: black;
+}
+
+label.more ul li:hover{
+    background-color:#ddd;
+}
+
+label.more ul li a:hover{
+    text-decoration: none;
+}
+
+/* sản phẩm */
+/* naruto */
+.product-title h3{
+    text-align: center;
+    color: #0066B2;
+    font-weight: 700;
+    font-size: 20px;
+    font-variant: small-caps;
+}
+
+/* làm cho 2 bên khung sản phẩm bị mờ đi */
+
+/* .nav-product::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    z-index: 1;
+    height: 100%;
+    width: 150px;
+    background-image:linear-gradient(-99deg, black, transparent);
+}
+
+.nav-product::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    z-index: 1;
+    height: 100%;
+    width: 150px;
+    background-image:linear-gradient(-99deg, black, transparent);
+} */
+
+/* vừa chinh sản phẩm vừa vừa làm thanh cuộn xuống qua trái phải */
+.nav-product-naruto {
+    scroll-behavior: smooth;
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    justify-content: space-between;
+}
+
+/* xóa đi thanh cuộn */
+.nav-product-naruto::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+/* one piece */
+.nav-product-onepiece {
+    scroll-behavior: smooth;
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    justify-content: space-between;
+}
+
+.nav-product-onepiece::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+/* dragonball */
+.nav-product-dragonball {
+    scroll-behavior: smooth;
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    justify-content: space-between;
+}
+
+.nav-product-dragonball::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+/* kimetsunoyaiba */
+.nav-product-kimetsunoyaiba {
+    scroll-behavior: smooth;
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    justify-content: space-between;
+}
+
+.nav-product-kimetsunoyaiba::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+/* jujutsu kaisen */
+.nav-product-jujutsujaisen {
+    scroll-behavior: smooth;
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    justify-content: space-between;
+}
+
+.nav-product-jujutsujaisen::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+/* more */
+.nav-product-more {
+    scroll-behavior: smooth;
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    justify-content: space-between;
+}
+
+.nav-product-more::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.product {
+    margin-left:20px;
+    width: 80%;
+    padding: 5px 5px 5px 5px;
+}
+
+.product-list {
+    width: 16%;
+    margin-top: 10px;
+    height: 320px;
+    box-shadow: 0 1px 3px #888;
+    position: relative;
+    margin: 10px 5px 3px 5px;
+}
+
+/* cho dòng chủ không xuống hàng và nếu nó gh k hết thì nó sẽ k xuống dòng mà nó 3 chấm */
+
+.home-product-item__name {
+    overflow: hidden;
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 15px;
+    padding: 0px 5px 0px 5px;
+    font-weight: 600;
+}
+
+.home-product-item__price {
+    padding: 0px 5px 0px 5px;
+}
+
+.home-product-item__action {
+    padding: 0px 5px 0px 5px;
+}
+
+.home-product-item__img a img{
+    width: 100%;
+}
+
+.home-product-item__price {
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-product-item__price-old {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.home-product-item__origin {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 5px 0px 5px;
+}
+
+.banner-1 img {
+    margin-top: 10px;
+    width: 100%;
+    height: auto;
+}
+
+.banner-2 img {
+    margin-top: 10px;
+    width: 100%;
+    height: 400px;
+}
+
+.banner-3 img {
+    margin-top: 10px;
+    width: 100%;
+    height: 400px;
+}
+
+.home-product-item__sale-off span{
+    position: absolute;
+    background-color:#dc052d;
+    top: 0;
+    padding: 0px 2px 0px 2px;
+    color: white;
+    font-size: 10px;
+    font-weight: 600;
+    font-variant: small-caps;
+    border-bottom-right-radius: 3px;
+}
+
+/* nút để chuyển khung */
+.button {
+    text-align: center;
+}
+
+button.icon{
+    border: none;
+    background-color: white;
+    font-size: 15px;
+    padding: 2px 5px 2px 5px;
+}
+
+button.icon:hover {
+    color: #ddd;
+}
+
+button.icon:focus {
+    outline: none;
+}
+
+/* chân trang */
+
+.footer
+{
+    background-color: black;
+}
+footer.footer {
+    background-color:black;
+    height: 350px;
+    width: 100%;
+    margin-top:243px;
+}
+
+.footer__list {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 40px 20px 40px;      
+    background-color: black;
+}
+.footer__list-title
+{
+    padding-left:10px;  
+    background-color: black;
+}
+
+.footer__list-title h2{
+    color: white;
+    width: 300px;
+    margin-bottom: 20px;
+    margin-top: 27px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.footer__list-title img {
+    width: 150px;
+    height: auto;
+}
+
+.footer__list-title p{
+    width: 200px;
+    font-size: 12px;
+    color:rgba(255, 255, 255, 0.553);
+    font-family:sans-serif;
+}
+
+.footer__list-category {
+    font-family:sans-serif;
+}
+
+.footer__list-category h5{
+    color: white;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    font-size: 20px;
+    /* margin-left:-200px; */
+}
+
+.footer__list-category ul li{
+    list-style: none;
+    /* margin-left:-20px; */
+    color: white;
+    padding: 5px 0px 5px 0px;
+    
+}
+
+.footer__list-category ul li a {
+    color:rgba(255, 255, 255, 0.553);
+    font-size: 12px;
+    text-decoration:none;
+}
+
+.footer__list-category ul li a:hover {
+    text-decoration: none;
+    color: #ddd;
+}
+
+.footer__list-user-manual {
+    font-family:sans-serif;
+}
+
+.footer__list-user-manual h5{
+    color: white;
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+.footer__list-user-manual ul li{
+    list-style: none;
+    color: white;
+    padding: 5px 0px 5px 0px;
+}
+
+.footer__list-user-manual ul li a{
+    color:rgba(255, 255, 255, 0.553);
+    font-size: 12px;
+    text-decoration:none;
+}
+
+.footer__list-user-manual ul li a:hover{
+    text-decoration: none;
+    color: #ddd;
+}
+
+.footer__list-link-social img{
+    width: 130px;
+    height: 40px;
+    padding-right:10px;
+}
+
+.footer__list-link-social {
+    margin-top:30px ;
+}
+
+.footer__list-link-social h5 {
+    font-size: 20px;
+    color: white;
+    font-family:sans-serif;
+    padding-bottom:20px;
+}
+
+.footer__list-link-hotline h6{
+    margin-top: 20px;
+    color: white;
+    font-family:sans-serif;
+    font-size: 20px;
+    margin-bottom:10px;
+}
+
+.footer__list-link-hotline a {
+    color:rgba(255, 255, 255, 0.553);
+    padding: 0px 8px 0px 15px;
+    font-size: 20px;
+    text-decoration:none;
+
+}
+
+.footer__list-link-hotline a:hover {
+    text-decoration: none;
+    color: #ddd;
+}
+
+/* phần mua sản phẩm */
+.product__info {
+    display: flex;
+    /* margin:20px 0px 20px 40px; */
+}
+
+.product__info-img img {
+    height: 500px;
+    padding-right: 20px;
+    width: 500px;
+}
+
+.product__info-list-product img {
+    width: 20%;
+}
